@@ -32,6 +32,10 @@ const ToDoList = () => {
 		setTask(updateTasks);
 	};
 
+	const deleteTaskAll = () => {
+		setTask([]);
+	};
+
 	return (
 		<>
 			<ContainerTodo>
@@ -60,11 +64,7 @@ const ToDoList = () => {
 						);
 					})}
 				</FormTodo>
-				<ButtonTodoRemoveAll
-					onClick={() => {
-						setTask = [];
-					}}
-				>
+				<ButtonTodoRemoveAll onClick={deleteTaskAll}>
 					Borras tareas
 				</ButtonTodoRemoveAll>
 			</ContainerTodo>
