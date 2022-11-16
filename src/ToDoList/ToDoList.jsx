@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
 	ButtonTodoRemoveAll,
 	ContainerTodo,
@@ -11,9 +11,20 @@ import {
 import { GrAddCircle } from 'react-icons/gr';
 import { IoTrashBinSharp } from 'react-icons/io5';
 
+// obtener data del localStorage
+
+const getLocalStorage = () => {
+	let list = localStorage.getItem('lists');
+	if (list) {
+		return JSON.parse(localStorage.getItem('lists'));
+	} else {
+		return [];
+	}
+};
+
 const ToDoList = () => {
 	const [inputTask, setInputTask] = useState('');
-	const [task, setTask] = useState([]);
+	const [task, setTask] = useState(getLocalStorage());
 
 	const addTask = (e) => {
 		e.preventDefault();
@@ -35,6 +46,12 @@ const ToDoList = () => {
 	const deleteTaskAll = () => {
 		setTask([]);
 	};
+
+	// Agregar data al localStorage //
+
+	useEffect(() => {
+		localStorage.setItem('lists', JSON.stringify(task));
+	}, [task]);
 
 	return (
 		<>

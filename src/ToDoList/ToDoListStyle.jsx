@@ -47,7 +47,7 @@ export const ButtonTodoRemoveAll = styled.button`
 	);
 	color: white;
 	cursor: pointer;
-	& :hover {
+	:hover {
 		background: aliceblue;
 		color: #131415;
 	}
@@ -56,6 +56,7 @@ export const ButtonTodoRemoveAll = styled.button`
 export const ButtonAddInput = styled.button`
 	font-size: 30px;
 	background-color: #4747ff;
+	color: #f1f1f1;
 	border: none;
 	cursor: pointer;
 	display: flex;
