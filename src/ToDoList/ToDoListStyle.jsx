@@ -5,6 +5,7 @@ export const ContainerTodo = styled.div`
 	flex-direction: column;
 	align-items: center;
 	height: 100vh;
+	width: 100%;
 	background-color: #4747ff;
 	color: #ffffff;
 	padding-top: 100px;
@@ -19,8 +20,9 @@ export const FormTodo = styled.form`
 
 export const InputTodo = styled.input`
 	padding: 10px;
-	width: 400px;
+	width: 300px;
 	height: 40px;
+	margin-top: 20px;
 	border-radius: 15px;
 	outline: none;
 	background-color: #ffffff;
@@ -34,8 +36,8 @@ export const InputTodo = styled.input`
 export const ButtonTodoRemoveAll = styled.button`
 	padding: 10px 50px;
 	border-radius: 15px;
-	margin-top: 30px;
-	width: 300px;
+	margin-top: 10px;
+	width: 320px;
 	background: rgb(71, 71, 255);
 	background: linear-gradient(
 		333deg,
@@ -46,7 +48,7 @@ export const ButtonTodoRemoveAll = styled.button`
 	color: white;
 	cursor: pointer;
 	& :hover {
-		background-color: aliceblue;
+		background: aliceblue;
 		color: #131415;
 	}
 `;
@@ -56,13 +58,15 @@ export const ButtonAddInput = styled.button`
 	background-color: #4747ff;
 	border: none;
 	cursor: pointer;
+	display: flex;
+	margin-top: 20px;
 `;
 
 export const ContainerInputAndButton = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 20px;
+	height: 100px;
 `;
 
 export const ContainerRenderTask = styled.div`

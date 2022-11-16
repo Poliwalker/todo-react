@@ -39,7 +39,7 @@ const ToDoList = () => {
 	return (
 		<>
 			<ContainerTodo>
-				<h1>ToDo List</h1>
+				<h1>ADD TASK</h1>
 				<FormTodo onSubmit={addTask}>
 					<ContainerInputAndButton>
 						<InputTodo
